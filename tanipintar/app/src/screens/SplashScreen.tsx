@@ -7,7 +7,7 @@ const SplashScreen = () => {
     <SafeAreaView style={styles.container}>
       <View style={styles.innerContainer}>
         {/* React Icon (Logo) */}
-        <Ionicons name="leaf-outline" size={100} color="#fff" />
+        <Ionicons name="leaf-outline" size={250} color="#fff" />
         
         {/* Title */}
         <Text style={styles.title}>TANI PINTAR</Text>
@@ -19,7 +19,7 @@ const SplashScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#166953',  // Set the background color as #166953
+    backgroundColor: '#0D5c32',  // Set the background color as #166953
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: '#fff',
-    fontSize: 24,
+    fontSize: 30,
     fontWeight: 'bold',
     marginTop: 20,
   },
