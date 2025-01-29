@@ -7,19 +7,15 @@ const LoginScreen = ({ navigation }: any) => {
   const [error, setError] = useState('');
 
   const handleLogin = () => {
-    // Basic validation for phone number (just checking if it's not empty)
     if (!phoneNumber) {
       setError('Phone number is required!');
       return;
     }
-
-    // Proceed with login logic (e.g., call API or navigate to next screen)
     console.log('Logging in with:', phoneNumber);
-    navigation.navigate('Home');  // Navigate to Home screen after successful login
+    navigation.navigate('Home'); 
   };
 
   const handleRegister = () => {
-    // Navigate to the Register screen
     navigation.navigate('Register');
   };
 
@@ -45,12 +41,8 @@ const LoginScreen = ({ navigation }: any) => {
       <TouchableOpacity style={styles.button} onPress={handleLogin}>
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
-
-      {/* Align the text horizontally */}
       <View style={styles.footerContainer}>
         <Text style={styles.dontHaveAccountText}>Don't have an account? </Text>
-        
-        {/* Register link */}
         <TouchableOpacity onPress={handleRegister}>
           <Text style={styles.registerText}>Register</Text>
         </TouchableOpacity>
@@ -62,15 +54,15 @@ const LoginScreen = ({ navigation }: any) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',  // White background for the whole screen
+    backgroundColor: '#fff',  
     padding: 20,
     top: 80,
   },
   headerContainer: {
-    flexDirection: 'column',  // Stack Welcome and Back vertically
+    flexDirection: 'column', 
     marginBottom: 20,
-    justifyContent: 'flex-start',  // Align text to the left
-    alignItems: 'flex-start',  // Align text to the left
+    justifyContent: 'flex-start',  
+    alignItems: 'flex-start',  
   },
   welcomeText: {
     fontSize: 32,
@@ -95,7 +87,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     fontSize: 16,
     borderWidth: 2,
-    borderColor: '#166953',  // Green border for input fields
+    borderColor: '#166953',  
   },
   errorText: {
     color: 'red',
@@ -104,7 +96,7 @@ const styles = StyleSheet.create({
   },
   button: {
     width: '100%',
-    backgroundColor: '#166953',  // Green background for the Login button
+    backgroundColor: '#166953',  
     padding: 15,
     borderRadius: 8,
     alignItems: 'center',
@@ -116,8 +108,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   footerContainer: {
-    flexDirection: 'row', // Align texts horizontally (Don't have an account? + Register)
-    justifyContent: 'center', // Center align the content
+    flexDirection: 'row', 
+    justifyContent: 'center',
     marginTop: 20,
   },
   dontHaveAccountText: {
@@ -125,7 +117,7 @@ const styles = StyleSheet.create({
     color: '#888',
   },
   registerText: {
-    color: '#166953',  // Green text for the Register button
+    color: '#166953', 
     fontSize: 16,
     textDecorationLine: 'underline',
   },
